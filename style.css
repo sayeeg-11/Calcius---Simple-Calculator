@@ -1,0 +1,100 @@
+/* ====== Global Styles ====== */
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+}
+
+/* ====== Wrapper to Center Calculator ====== */
+.calculator-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* vertical center */
+    align-items: center;      /* horizontal center */
+    background: rgb(8, 2, 2);
+}
+
+/* Heading */
+h1 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #90924d;
+    text-align: center;
+    text-shadow: 1px 1px 2px #ddd;
+}
+
+/* ====== Calculator Container ====== */
+.calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    border-radius: 12px;
+    background: #e4e0be;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Input Display */
+.row input {
+    width: 100%;
+    font-size: 22px;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 2px solid black;
+    border-radius: 5px;
+    text-align: right;
+    box-sizing: border-box;
+}
+
+/* Buttons Grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    width: 100%;
+}
+
+/* Button Style */
+.button {
+    padding: 18px;
+    font-size: 18px;
+    border: 2px solid black;
+    border-radius: 9px;
+    cursor: pointer;
+    background: #f0f0f0;
+    transition: background 0.2s;
+}
+
+.button:hover { background: #ddd; }
+
+/* Special Buttons */
+.bg-red { background: #ec9187; color: #fff; }
+.bg-red:hover { background: #c0392b; }
+.operator { background: #99b6e6; color: #fff; }
+.operator:hover { background: #3367d6; }
+.memory { background: #a6f3aa; color: #fff; }
+.memory:hover { background: #2e7d32; }
+.equal { background: #d6b582; color: #fff; }
+.equal:hover { background: #e68900; }
+
+/* Utility Classes */
+.text-center { text-align: center; }
+.mx-auto { margin: auto; }
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.items-center { align-items: center; }
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .calculator {
+        width: 95%;
+        padding: 10px;
+    }
+    .row input { font-size: 18px; padding: 10px; }
+    .button { padding: 15px; font-size: 16px; }
+}
